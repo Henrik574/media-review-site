@@ -1,28 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Submit Review</title>
-</head>
-<body>
-  <form id="review-form">
-    <input type="text" name="user" placeholder="Your Name" required>
-    <textarea name="review" placeholder="Your Review" required></textarea>
-    <button type="submit">Submit</button>
-  </form>
-
-  <script>
-    document.getElementById('review-form').addEventListener('submit', async function(event) {
-      event.preventDefault();
-      const formData = new FormData(this);
-      const response = await fetch('/submit-review', {
-        method: 'POST',
-        body: formData
-      });
-      if (response.redirected) {
-        window.location.href = response.url;
-      }
-    });
-  </script>
-</body>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nestlet</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="top-menu">
+            <a href="index.html"><img src="./images/logo.jpg" class="logo"></a>
+        </div>
+        <h1 id="title">Nestlet</h1>
+        <h2>Made by Henrik & Luke</h2>
+        <h3>Welcome!</h3>
+        <p>Nestlet is a media review site (includes movies, books, etc)</p>
+    </body>
 </html>
+
